@@ -6,22 +6,12 @@ import (
 	"log"
 	"os"
 
-	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func loadEnv() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-}
-
 // ConnectDB allows connect in the DB
 func ConnectDB() *mongo.Client {
-	loadEnv()
-
 	var URI = fmt.Sprintf("mongodb+srv://twittor:" + os.Getenv("DB_PASSWORD") + "@twittor.wwrlx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 	var clientOptions = options.Client().ApplyURI(URI)

@@ -5,7 +5,12 @@ import (
 
 	"github.com/MessiasJunio/twittor/db"
 	"github.com/MessiasJunio/twittor/handlers"
+	"github.com/joho/godotenv"
 )
+
+func init() {
+	loadEnv()
+}
 
 func main() {
 	if db.CheckConnection() == 0 {
@@ -13,4 +18,11 @@ func main() {
 	}
 
 	handlers.Managers()
+}
+
+func loadEnv() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 }

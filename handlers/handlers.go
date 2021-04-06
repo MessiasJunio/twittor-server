@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gorilla/middleWares"
+	"github.com/MessiasJunio/twittor/middlewares"
+	"github.com/MessiasJunio/twittor/routers"
 	"github.com/gorilla/mux"
-	"github.com/gorilla/routers"
 	"github.com/rs/cors"
 )
 
@@ -15,7 +15,7 @@ import (
 func Managers() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/register", middleWares.CheckDB(routers.Register)).Methods("POST")
+	router.HandleFunc("/register", middlewares.CheckDB(routers.Register)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 
