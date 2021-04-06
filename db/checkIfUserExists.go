@@ -13,7 +13,7 @@ func CheckIfUserExists(email string) (models.User, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
-	db := ConnectDB().Database("twittor")
+	db := ConnectDB().Database("twittor-react")
 	col := db.Collection("users")
 
 	condition := bson.M{"email": email}

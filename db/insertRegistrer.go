@@ -14,7 +14,7 @@ func InsertRegister(u models.User) (string, bool, error) {
 
 	defer cancel()
 
-	db := ConnectDB().Database("twittor")
+	db := ConnectDB().Database("twittor-react")
 
 	col := db.Collection("users")
 
