@@ -8,7 +8,7 @@ import (
 )
 
 func GenerateJWT(t models.User) (string, error) {
-	myKey := []byte("MastersDevelopers")
+	myKey := []byte("MastersOfDevelopment")
 
 	payload := jwt.MapClaims{
 

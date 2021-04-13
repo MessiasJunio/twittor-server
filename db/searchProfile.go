@@ -16,7 +16,7 @@ func SearchProfile(ID string) (models.User, error) {
 	defer cancel()
 
 	db := ConnectDB().Database("twittor-react")
-	col := db.Collection("usuarios")
+	col := db.Collection("users")
 
 	var profile models.User
 

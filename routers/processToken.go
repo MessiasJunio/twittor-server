@@ -6,7 +6,7 @@ import (
 
 	"github.com/MessiasJunio/twittor/db"
 	"github.com/MessiasJunio/twittor/models"
-	"github.com/dgrijalva/jwt-go"
+	jwt "github.com/dgrijalva/jwt-go"
 )
 
 // Email value of Email used in EndPoints
