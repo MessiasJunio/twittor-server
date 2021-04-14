@@ -8,7 +8,7 @@ import (
 	"github.com/MessiasJunio/twittor/models"
 )
 
-//Registro a function that creates a user database register
+//Register a function that creates a user database register
 func Register(w http.ResponseWriter, r *http.Request) {
 	var t models.User
 	err := json.NewDecoder(r.Body).Decode(&t)
