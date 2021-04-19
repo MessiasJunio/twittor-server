@@ -28,6 +28,8 @@ func Managers() {
 	router.HandleFunc("/uploadBanner", middlewares.CheckDB(middlewares.ValidateJWT(routers.UploadBanner))).Methods("POST")
 	router.HandleFunc("/getBanner", middlewares.CheckDB(routers.GetBanner)).Methods("GET")
 
+	router.HandleFunc("/highRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.HighRatio))).Methods("POST")
+
 	PORT := os.Getenv("PORT")
 
 	if PORT == "" {
