@@ -33,6 +33,7 @@ func Managers() {
 	router.HandleFunc("/readRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadRatio))).Methods("GET")
 
 	router.HandleFunc("/usersList", middlewares.CheckDB(middlewares.ValidateJWT(routers.UsersList))).Methods("GET")
+	router.HandleFunc("/readFollowersTweets", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadFollowersTweets))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 

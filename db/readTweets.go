@@ -9,7 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func ReadTweets(ID string, pagina int64) ([]*models.ReturnTweet, bool) {
+func ReadTweets(ID string, page int64) ([]*models.ReturnTweet, bool) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
@@ -25,7 +25,7 @@ func ReadTweets(ID string, pagina int64) ([]*models.ReturnTweet, bool) {
 	optionsMongo := options.Find()
 	optionsMongo.SetLimit(20)
 	optionsMongo.SetSort(bson.D{{Key: "date", Value: -1}})
-	optionsMongo.SetSkip((pagina - 1) * 20)
+	optionsMongo.SetSkip((page - 1) * 20)
 
 	cursor, err := col.Find(ctx, condition, optionsMongo)
 	if err != nil {
