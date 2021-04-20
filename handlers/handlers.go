@@ -30,6 +30,7 @@ func Managers() {
 
 	router.HandleFunc("/highRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.HighRatio))).Methods("POST")
 	router.HandleFunc("/lowRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.LowRatio))).Methods("DELETE")
+	router.HandleFunc("/readRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadRatio))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 
