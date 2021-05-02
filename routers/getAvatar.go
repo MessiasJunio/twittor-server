@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/MessiasJunio/twittor/db"
+	"github.com/MessiasJunio/twittor-server/db"
 )
 
 //GetBanner get avatar sended to http

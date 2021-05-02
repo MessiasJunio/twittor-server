@@ -1,7 +1,7 @@
 package db
 
 import (
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

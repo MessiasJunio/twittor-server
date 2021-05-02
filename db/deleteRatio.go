@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/models"
 )
 
 func DeleteRatio(t models.Ratio) (bool, error) {

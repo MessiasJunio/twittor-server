@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/MessiasJunio/twittor/db"
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/db"
+	"github.com/MessiasJunio/twittor-server/models"
 	jwt "github.com/dgrijalva/jwt-go"
 )
 

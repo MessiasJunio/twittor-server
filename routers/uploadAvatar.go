@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/MessiasJunio/twittor/db"
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/db"
+	"github.com/MessiasJunio/twittor-server/models"
 )
 
 func UploadAvatar(w http.ResponseWriter, r *http.Request) {

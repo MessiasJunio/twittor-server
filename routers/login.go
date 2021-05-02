@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/MessiasJunio/twittor/db"
-	JWT "github.com/MessiasJunio/twittor/jwt"
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/db"
+	JWT "github.com/MessiasJunio/twittor-server/jwt"
+	"github.com/MessiasJunio/twittor-server/models"
 )
 
 /* Login sign in account */

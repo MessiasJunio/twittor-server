@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/MessiasJunio/twittor/db"
+	"github.com/MessiasJunio/twittor-server/db"
 )
 
 //ReadTweets read the tweets

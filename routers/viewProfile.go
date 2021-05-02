@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/MessiasJunio/twittor/db"
+	"github.com/MessiasJunio/twittor-server/db"
 )
 
 func ViewProfile(w http.ResponseWriter, r *http.Request) {

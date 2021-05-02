@@ -3,8 +3,8 @@ package routers
 import (
 	"net/http"
 
-	"github.com/MessiasJunio/twittor/db"
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/db"
+	"github.com/MessiasJunio/twittor-server/models"
 )
 
 func LowRatio(w http.ResponseWriter, r *http.Request) {

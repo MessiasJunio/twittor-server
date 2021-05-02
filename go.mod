@@ -1,4 +1,4 @@
-module github.com/MessiasJunio/twittor
+module github.com/MessiasJunio/twittor-server
 
 go 1.16
 

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/MessiasJunio/twittor/middlewares"
-	"github.com/MessiasJunio/twittor/routers"
+	"github.com/MessiasJunio/twittor-server/middlewares"
+	"github.com/MessiasJunio/twittor-server/routers"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )

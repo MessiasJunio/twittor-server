@@ -3,7 +3,7 @@ package routers
 import (
 	"net/http"
 
-	"github.com/MessiasJunio/twittor/db"
+	"github.com/MessiasJunio/twittor-server/db"
 )
 
 func DeleteTweet(w http.ResponseWriter, r *http.Request) {

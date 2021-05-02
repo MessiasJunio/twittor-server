@@ -3,7 +3,7 @@ package middlewares
 import (
 	"net/http"
 
-	"github.com/MessiasJunio/twittor/routers"
+	"github.com/MessiasJunio/twittor-server/routers"
 )
 
 // ValidateJWT validete JWT that cames from the petition

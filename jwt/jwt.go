@@ -3,7 +3,7 @@ package jwt
 import (
 	"time"
 
-	"github.com/MessiasJunio/twittor/models"
+	"github.com/MessiasJunio/twittor-server/models"
 	"github.com/dgrijalva/jwt-go"
 )
 

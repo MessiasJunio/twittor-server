@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/MessiasJunio/twittor/db"
+	"github.com/MessiasJunio/twittor-server/db"
 )
 
 func UsersList(w http.ResponseWriter, r *http.Request) {
