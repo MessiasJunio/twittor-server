@@ -22,8 +22,8 @@ func UpdateRegistry(u models.User, ID string) (bool, error) {
 		registry["name"] = u.Name
 	}
 
-	if len(u.Surname) > 0 {
-		registry["surname"] = u.Surname
+	if len(u.LastName) > 0 {
+		registry["lastName"] = u.LastName
 	}
 
 	registry["birthDate"] = u.BirthDate

@@ -1,5 +1,5 @@
 package models
 
-type StatusRatio struct {
+type StatusRelation struct {
 	Status bool `json:"status"`
 }

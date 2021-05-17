@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -42,4 +43,15 @@ func CheckConnection() int {
 		return 0
 	}
 	return 1
+}
+
+func CreateDefaultContext() (context.Context, context.CancelFunc) {
+	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	return ctx, cancel
+}
+
+func GetCollection(collection string) *mongo.Collection {
+	database := ConnectDB().Database("twittor-react")
+	colllection := database.Collection(collection)
+	return colllection
 }

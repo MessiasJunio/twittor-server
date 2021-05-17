@@ -28,9 +28,9 @@ func Managers() {
 	router.HandleFunc("/uploadBanner", middlewares.CheckDB(middlewares.ValidateJWT(routers.UploadBanner))).Methods("POST")
 	router.HandleFunc("/getBanner", middlewares.CheckDB(routers.GetBanner)).Methods("GET")
 
-	router.HandleFunc("/highRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.HighRatio))).Methods("POST")
-	router.HandleFunc("/lowRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.LowRatio))).Methods("DELETE")
-	router.HandleFunc("/readRatio", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadRatio))).Methods("GET")
+	router.HandleFunc("/highRelation", middlewares.CheckDB(middlewares.ValidateJWT(routers.HighRelation))).Methods("POST")
+	router.HandleFunc("/lowRelation", middlewares.CheckDB(middlewares.ValidateJWT(routers.LowRelation))).Methods("DELETE")
+	router.HandleFunc("/readRelation", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadRelation))).Methods("GET")
 
 	router.HandleFunc("/usersList", middlewares.CheckDB(middlewares.ValidateJWT(routers.UsersList))).Methods("GET")
 	router.HandleFunc("/readFollowersTweets", middlewares.CheckDB(middlewares.ValidateJWT(routers.ReadFollowersTweets))).Methods("GET")

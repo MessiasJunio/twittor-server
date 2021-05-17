@@ -40,13 +40,13 @@ func ReadAllUsers(ID string, page int64, search string, userType string) ([]*mod
 			return results, false
 		}
 
-		var r models.Ratio
+		var r models.Relation
 		r.UserID = ID
-		r.UserRatioID = s.ID.Hex()
+		r.UserRelationID = s.ID.Hex()
 
 		insert = false
 
-		found, err = ReadRatio(r)
+		found, err = ReadRelation(r)
 		if userType == "new" && found == false {
 			insert = true
 		}
@@ -55,7 +55,7 @@ func ReadAllUsers(ID string, page int64, search string, userType string) ([]*mod
 			insert = true
 		}
 
-		if r.UserRatioID == ID {
+		if r.UserRelationID == ID {
 			insert = false
 		}
 

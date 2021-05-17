@@ -48,11 +48,11 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(resp)
 
-	expirationTime := time.Now().Add(24 * time.Hour)
+	expirelationnTime := time.Now().Add(24 * time.Hour)
 
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
 		Value:   jwtKey,
-		Expires: expirationTime,
+		Expires: expirelationnTime,
 	})
 }

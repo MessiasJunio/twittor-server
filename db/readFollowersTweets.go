@@ -13,17 +13,16 @@ func ReadFollowersTweets(ID string, page int) ([]models.ReturnFollowersTweets, b
 	defer cancel()
 
 	db := ConnectDB().Database("twittor-react")
-	col := db.Collection("ratio")
+	col := db.Collection("relation")
 
 	skip := (page - 1) * 20
 
 	condition := make([]bson.M, 0)
 	condition = append(condition, bson.M{"$match": bson.M{"userid": ID}})
-
 	condition = append(condition, bson.M{
 		"$lookup": bson.M{
 			"from":         "tweet",
-			"localField":   "userratioid",
+			"localField":   "userrelationid",
 			"foreignField": "userid",
 			"as":           "tweet",
 		}})
@@ -39,5 +38,4 @@ func ReadFollowersTweets(ID string, page int) ([]models.ReturnFollowersTweets, b
 		return result, false
 	}
 	return result, true
-
 }

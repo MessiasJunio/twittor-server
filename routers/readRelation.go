@@ -8,15 +8,15 @@ import (
 	"github.com/MessiasJunio/twittor-server/models"
 )
 
-func ReadRatio(w http.ResponseWriter, r *http.Request) {
+func ReadRelation(w http.ResponseWriter, r *http.Request) {
 	ID := r.URL.Query().Get("id")
 
-	var t models.Ratio
+	var t models.Relation
 	t.UserID = UserID
-	t.UserRatioID = ID
+	t.UserRelationID = ID
 
-	var resp models.StatusRatio
-	status, err := db.ReadRatio(t)
+	var resp models.StatusRelation
+	status, err := db.ReadRelation(t)
 	if err != nil || status == false {
 		resp.Status = false
 	} else {
