@@ -13,7 +13,7 @@ import (
 
 // ConnectDB allows connect in the DB
 func ConnectDB() *mongo.Client {
-	var URI = fmt.Sprintf("mongodb+srv://twittor:" + os.Getenv("DB_PASSWORD") + "@twittor.wwrlx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+	var URI = fmt.Sprintf(os.Getenv("MONGO_COMPASS_CONNECTION_STRING"))
 
 	var clientOptions = options.Client().ApplyURI(URI)
 
